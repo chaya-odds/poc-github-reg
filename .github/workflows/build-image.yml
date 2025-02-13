@@ -48,7 +48,8 @@ jobs:
           context: .
           file: Dockerfile.client
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/client
+          tags: ghcr.io/${{ github.repository_owner }}/poc-github-reg/client:latest
+
       
       - name: Build Service and push Docker image
         uses: docker/build-push-action@v4
@@ -56,4 +57,4 @@ jobs:
           context: .
           file: Dockerfile.service
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/service
+          tags: ghcr.io/${{ github.repository_owner }}/poc-github-reg/service:latest
